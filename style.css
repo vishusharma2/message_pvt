@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Marquee CSS */
+.marq-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: black;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.marq-content {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background-image: url(bg.png); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 70px; /* To prevent overlap with marquee */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    flex: 1 1 calc(100% - 40px); /* Full width on small screens */
+    max-width: 400px; /* Limit card width */
+    min-width: 280px; /* Minimum width for smaller screens */
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #90e0ef;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.front img.sry {
+    height: auto;
+    width: 60%;
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.cardTop {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.cardbody {
+    color: #333;
+}
+
+.inside {
+    padding: 20px;
+    background-color: #fefae0;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+/* End Section */
+.end {
+    text-align: center;
+    margin: 20px;
+    color: white;
+}
+
+.end button {
+    margin: 10px;
+    width: 150px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (min-width: 576px) {
+    .card {
+        flex: 1 1 calc(50% - 40px); /* Two cards per row on small screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        flex: 1 1 calc(33.33% - 40px); /* Three cards per row on large screens */
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init({
+        publicKey: "Fy1qc9177ft5CMZmJ",
+        });
+    })();
+    </script>
+</head>
+<body>
+    <!-- Marquee Section -->
+    <div class="marq-container">
+        <div class="marq-content">Sorry Card By Vishu</div>
+    </div>
+    <div class="containe">
+        <!-- Card Section -->
+        <div class="body">
+            <div class="card-container">
+                <!-- First Card -->
+                <div class="card" id="card1" onclick="showNextCard(2)">
+                    <div class="front">
+                        <img src="sry.png" alt="Sorry" class="sry">
+                        <div class="cardTop">Apology Letter</div>
+                        <hr>
+                        <div class="cardbody">Click here to open</div>
+                    </div>
+                </div>
+
+                <!-- Second Card -->
+                <div class="card" id="card2" style="display: none;" onclick="showNextCard(3)">
+                    <div class="inside">
+                        <h2>Dear Vanshika,</h2>
+                        <p>
+                            I hope you’re doing well. I’ve been reflecting a lot on what happened last year, and I want to take this opportunity to sincerely apologize for my behavior.
+                            Back then, during the third semester, I was going through a tough time. I had heard from classmates that the university didn’t give marks easily, and even perfect answers could lead to failure. That thought deeply affected me, and I fell into a depression, though I tried my best to hide it out of fear that people might laugh at me. When I met you, I felt like I could finally share my worries with someone, and I began to feel comfortable around you.
+                            <h2>Click here for next page</h2>
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Third Card -->
+                <div class="card" id="card3" style="display: none;" onclick="showNextCard(4)">
+                    <div class="inside" >
+                        <p>
+                            Unfortunately, things took a turn. Around the time of Freshers', my mind was overwhelmed. I had unresolved issues with friends like Shivanshu and Shivam, which added to my stress, and I began to lose control emotionally. One day, while talking to you, an old memory came rushing back to me—a moment from 2022 when a close friend from my diploma days stopped responding to me and even removed me from Instagram. That fear of rejection resurfaced, and I let it take over. Instead of handling it maturely, I acted impulsively, and for that, I am truly sorry.
+                            A similar situation happened recently when I was feeling low and reached out to another friend, Priyanka. She didn’t respond to my calls or messages initially, and I started to notice a pattern that reminded me of the past. For three days, I let my worries build up, but when she finally spoke to me, she explained she was dealing with her grandmother’s recent passing. She helped me understand the importance of sharing my feelings rather than letting fear and assumptions control me. In fact, she encouraged me to address the unresolved situation with you.
+                            <h2>Click here for next</h2>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Fourth Card -->
+                <div class="card" id="card4" style="display: none;">
+                    <div class="inside">
+                        <h2>Sorry</h2>
+                        <h3>From my bottom of my heart</h3>
+                        <p>
+                            It’s been a year since all of this happened, and I now realize how much my actions might have hurt you. I was scared to approach you and apologize before, fearing you might not accept it. But today, I want to sincerely say sorry for my behavior last year. I made mistakes, and I deeply regret them.
+                            I truly hope we can start fresh. Will you be my friend again? I promise to never let my insecurities or fears hurt you again and to ensure the mistakes of the past are never repeated.
+                            Thank you for taking the time to read this.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <h2>Will you be my Friend again PLS 🥺🥺??</h2>
+            <button type="submit" class="btn btn-success yesBtn" id="yesBtn" onclick="sendResponse('YES')">YES</button><br>
+            <button type="submit" class="btn btn-danger noBtn" id="noBtn" onclick="sendResponse('NO')">NO</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
